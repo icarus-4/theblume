@@ -25,4 +25,6 @@ export const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: dur.slow, ease: ease.out } },
 }
 
-export const viewport = { once: true, amount: 0.25 }
+// Reveal when any part of an element is 12% inside the viewport. A fractional
+// `amount` (e.g. 0.25) never triggers for lists taller than ~4 screens.
+export const viewport = { once: true, margin: '0px 0px -12% 0px' }

@@ -105,7 +105,7 @@ export const AI_SERVICES = [
 export const FAQS = [
   {
     q: 'What does theBlume do?',
-    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products, including the Android apps welikethisone and Fairly.',
+    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products: the Android apps welikethisone, Fairly and dashtr, and LANClip for Windows and Android.',
   },
   {
     q: 'What AI development services do you offer?',
@@ -217,9 +217,9 @@ export const AI_CONSOLE = [
   { role: 'agent', text: 'Drafted fixes for 2 of 3 and opened pull requests. Want me to notify the on-call engineer?' },
 ]
 
-// Android apps theBlume has built. `icon` is an optional image path in /public
+// Apps theBlume has built (Android, plus LANClip on Windows). `icon` is an optional image path in /public
 // (e.g. 'apps/welikethisone.png'); without one a drawn icon is used.
-// TODO(theBlume): add Fairly's Play Store link when it launches (status → 'live').
+// TODO(theBlume): add Play Store links for Fairly, dashtr and LANClip when they launch (status → 'live').
 export const APPS = [
   {
     key: 'welikethisone',
@@ -246,6 +246,33 @@ export const APPS = [
     tagline: 'Shared expenses for households and trips. Never capped, never a subscription, never ads.',
     body: 'Split a bill line by line straight from the receipt, track trips in multiple currencies at locked rates, and handle recurring bills. Fairly shows exactly who owes whom, and never moves money itself.',
     features: ['Line-item receipt splitting', 'On-device receipt scanning', 'Multi-currency', 'Recurring bills', 'No ads, no subscription'],
+  },
+  {
+    key: 'dashtr',
+    name: 'dashtr',
+    subtitle: 'Vehicle logbook',
+    category: 'Auto',
+    status: 'soon',
+    url: '',
+    website: 'https://icarus-4.github.io/dashtr-site/',
+    websiteLabel: 'dashtr website',
+    icon: 'apps/dashtr.png',
+    tagline: 'The true cost of every kilometre. Works offline, pay once.',
+    body: 'A logbook for people who want the real numbers: fuel economy measured tank to tank, running costs to the last rupee, and reminders before insurance, road tax or the emissions certificate expire. It runs entirely on the phone and imports history from Fuelio, Drivvo and aCar.',
+    features: ['Tank-to-tank fuel economy', 'Service & cost tracking', 'Paperwork reminders', 'Works fully offline', 'CSV & JSON export'],
+  },
+  {
+    key: 'lanclip',
+    name: 'LANClip',
+    subtitle: 'Shared clipboard',
+    category: 'Windows + Android',
+    status: 'soon',
+    url: '',
+    website: '',
+    icon: null,
+    tagline: 'Copy on your PC, paste on your phone. No cloud, no accounts.',
+    body: 'A clipboard shared across your devices over local Wi-Fi. Copy text on Windows and it is ready to paste on Android, and the other way round. Devices find each other automatically and only sync when they share the same passphrase, with every clip end-to-end encrypted.',
+    features: ['Local Wi-Fi sync', 'End-to-end encrypted', 'No cloud or accounts', 'Auto device discovery', 'Quick Settings tile'],
   },
 ]
 
