@@ -1,4 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy to AWS
+
+# Builds the site (with prerendering) and publishes it to S3 + CloudFront.
+# Authentication uses GitHub OIDC: no AWS keys are stored in this repo.
+# The role can only write to the theBlume bucket and refresh its CDN.
 
 on:
   push:
@@ -7,17 +11,17 @@ on:
 
 permissions:
   contents: read
-  pages: write
   id-token: write
 
-# One deployment at a time; never cancel one that is already publishing.
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    # No `environment:` here: it would change the OIDC subject and no longer
+    # match the role's trust policy (repo:icarus-4/theblume:ref:refs/heads/main).
     steps:
       - uses: actions/checkout@v4
 
@@ -31,18 +35,12 @@ jobs:
       # vite build + server render + per-page HTML, sitemap, robots.txt, llms.txt
       - run: npm run build
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
-          path: dist
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - run: bash scripts/deploy-aws.sh
+        env:
+          S3_BUCKET: ${{ vars.S3_BUCKET }}
+          CF_DISTRIBUTION_ID: ${{ vars.CF_DISTRIBUTION_ID }}
