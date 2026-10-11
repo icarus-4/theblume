@@ -8,7 +8,6 @@ import Marquee from './components/Marquee'
 import Services from './components/Services'
 import AISection from './components/AISection'
 import AIServices from './components/AIServices'
-import Finhance from './components/Finhance'
 import Apps from './components/Apps'
 import Process from './components/Process'
 import Industries from './components/Industries'
@@ -117,7 +116,6 @@ export default function App({ path }) {
             <Services />
             <AISection />
             <AIServices onStartProject={openForm} />
-            <Finhance />
             <Apps />
             <Process />
             <Industries />

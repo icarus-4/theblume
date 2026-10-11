@@ -154,7 +154,7 @@ export function cube(count, r = rng(37)) {
   return out
 }
 
-// 3 — Flowing data terrain; the shader animates its height (Finhance).
+// 3 — Flowing data terrain; the shader animates its height (apps).
 export function wave(count, r = rng(41)) {
   const out = new Float32Array(count * 3)
   const cols = Math.ceil(Math.sqrt(count * 2.2))

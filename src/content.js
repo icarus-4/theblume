@@ -15,7 +15,6 @@ export const PROJECT_FORM = {
 export const NAV_LINKS = [
   { page: 'services', label: 'Services' },
   { page: 'ai-development', label: 'AI Development' },
-  { id: 'finhance', label: 'FinHance LMS' },
   { id: 'apps', label: 'Apps' },
   { id: 'process', label: 'Process' },
   { id: 'industries', label: 'Industries' },
@@ -106,7 +105,7 @@ export const AI_SERVICES = [
 export const FAQS = [
   {
     q: 'What does theBlume do?',
-    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products, including the FinHance LMS and the Android apps welikethisone and Fairly.',
+    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products, including the Android apps welikethisone and Fairly.',
   },
   {
     q: 'What AI development services do you offer?',
@@ -217,20 +216,6 @@ export const AI_CONSOLE = [
   { role: 'agent', text: 'Analysed 412 tickets. 3 urgent: payment gateway timeout, login loop on Android 15, invoice export failing.' },
   { role: 'agent', text: 'Drafted fixes for 2 of 3 and opened pull requests. Want me to notify the on-call engineer?' },
 ]
-
-// TODO(theBlume): confirm the FinHance LMS feature list matches the shipped product.
-export const FINHANCE = {
-  eyebrow: 'Our product',
-  title: 'FinHance LMS',
-  url: 'https://www.finhance.ai/',
-  sub: 'A learning management system we designed and built for FinHance, connecting career direction, role-relevant skills, practical learning and career readiness for learners, colleges and employers in India.',
-  features: [
-    { title: 'Structured learning paths', body: 'Courses, modules and lessons organised into clear journeys.' },
-    { title: 'Assessments & certificates', body: 'Quizzes, graded assignments and auto-issued certificates.' },
-    { title: 'Live progress analytics', body: 'Dashboards for learners and admins, updated in real time.' },
-    { title: 'AI-assisted learning', body: 'Smart recommendations that keep every learner moving forward.' },
-  ],
-}
 
 // Android apps theBlume has built. `icon` is an optional image path in /public
 // (e.g. 'apps/welikethisone.png'); without one a drawn icon is used.
