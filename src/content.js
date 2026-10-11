@@ -1,6 +1,5 @@
 // All site copy lives here so it can be edited without touching components.
-// TODO(theBlume): replace CONTACT_EMAIL with the real inbox before launch.
-export const CONTACT_EMAIL = 'hello@theblume.com'
+export const CONTACT_EMAIL = 'hello@theblume.in'
 
 // "Start a project" form. The site is static, so submissions need a form
 // service: paste its endpoint here (e.g. https://formspree.io/f/xxxxxx).
@@ -16,7 +15,7 @@ export const PROJECT_FORM = {
 export const NAV_LINKS = [
   { page: 'services', label: 'Services' },
   { page: 'ai-development', label: 'AI Development' },
-  { id: 'finhance', label: 'Finhance LMS' },
+  { id: 'finhance', label: 'FinHance LMS' },
   { id: 'apps', label: 'Apps' },
   { id: 'process', label: 'Process' },
   { id: 'industries', label: 'Industries' },
@@ -107,7 +106,7 @@ export const AI_SERVICES = [
 export const FAQS = [
   {
     q: 'What does theBlume do?',
-    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products, including the Finhance LMS and the Android apps welikethisone and Fairly.',
+    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products, including the FinHance LMS and the Android apps welikethisone and Fairly.',
   },
   {
     q: 'What AI development services do you offer?',
@@ -219,11 +218,12 @@ export const AI_CONSOLE = [
   { role: 'agent', text: 'Drafted fixes for 2 of 3 and opened pull requests. Want me to notify the on-call engineer?' },
 ]
 
-// TODO(theBlume): confirm the Finhance LMS feature list matches the shipped product.
+// TODO(theBlume): confirm the FinHance LMS feature list matches the shipped product.
 export const FINHANCE = {
   eyebrow: 'Our product',
-  title: 'Finhance LMS',
-  sub: 'A learning management system we designed and built for Finhance — turning finance education into an engaging, measurable experience.',
+  title: 'FinHance LMS',
+  url: 'https://www.finhance.ai/',
+  sub: 'A learning management system we designed and built for FinHance, connecting career direction, role-relevant skills, practical learning and career readiness for learners, colleges and employers in India.',
   features: [
     { title: 'Structured learning paths', body: 'Courses, modules and lessons organised into clear journeys.' },
     { title: 'Assessments & certificates', body: 'Quizzes, graded assignments and auto-issued certificates.' },
@@ -243,6 +243,7 @@ export const APPS = [
     category: 'Social',
     status: 'live',
     url: 'https://play.google.com/store/apps/details?id=com.welikethisone.app&hl=en_IN',
+    website: 'https://www.welikethisone.com/',
     icon: null,
     tagline: 'Social media run by the people using it. The room votes — and it votes on you.',
     body: 'Post on a board, vote on what you see, and vote on each other. Comic and film theories on Panels, animal rescue on Strays, and moderation built into the product instead of a settings page.',
@@ -255,6 +256,7 @@ export const APPS = [
     category: 'Finance',
     status: 'soon',
     url: '',
+    website: 'https://www.thefairly.in/',
     icon: 'apps/fairly.png',
     tagline: 'Shared expenses for households and trips. Never capped, never a subscription, never ads.',
     body: 'Split a bill line by line straight from the receipt, track trips in multiple currencies at locked rates, and handle recurring bills. Fairly shows exactly who owes whom, and never moves money itself.',

@@ -110,7 +110,14 @@
   max-width: 54ch;
 }
 .app-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 6px;
+}
+.btn-site {
+  min-height: 56px;
+  border-radius: 14px;
 }
 
 .btn-store {
@@ -630,7 +637,8 @@
   .phone-frame {
     width: 220px;
   }
-  .btn-store {
+  .btn-store,
+  .btn-site {
     width: 100%;
     justify-content: flex-start;
   }

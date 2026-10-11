@@ -41,7 +41,7 @@ export default function Footer({ isHome, onNavigate }) {
         <nav aria-label="Company">
           <h2 className="footer-h">Company</h2>
           <ul>
-            <li>{anchor('finhance', 'Finhance LMS')}</li>
+            <li>{anchor('finhance', 'FinHance LMS')}</li>
             <li>{anchor('apps', 'Our apps')}</li>
             <li>{anchor('process', 'How we work')}</li>
             <li>{anchor('industries', 'Industries')}</li>

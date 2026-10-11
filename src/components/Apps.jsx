@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
-import { ArrowUpRight, Clock, Hourglass, ThumbsDown, Zap, Smartphone } from 'lucide-react'
+import { ArrowUpRight, Clock, Globe, Hourglass, ThumbsDown, Zap, Smartphone } from 'lucide-react'
 import { APPS } from '../content'
 import { SplitHeading, Reveal, TiltCard, useInViewOnce } from './fx'
 import { dur, ease, stagger, viewport } from '../motion'
@@ -224,6 +224,13 @@ function AppCard({ app, index }) {
               <span className="btn btn-store is-disabled" aria-disabled="true">
                 <PlayGlyph /> <span><small>Google Play</small>Link coming soon</span>
               </span>
+            )}
+            {app.website && (
+              <a className="btn btn-ghost btn-site" href={app.website} target="_blank" rel="noopener noreferrer">
+                <Globe size={18} aria-hidden="true" /> {new URL(app.website).hostname.replace(/^www\./, '')}
+                <ArrowUpRight size={16} aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
             )}
           </div>
         </div>

@@ -32,6 +32,7 @@ function organization(site, full) {
     description:
       'theBlume is an AI development and software company that builds generative AI apps, AI agents, AI integrations, custom software, Android and iOS apps, and provides tech support for businesses in every industry.',
     slogan: 'Ideas, grown into intelligent software.',
+    email: 'hello@theblume.in',
     knowsAbout: [
       'Artificial intelligence development', 'Generative AI', 'Large language models', 'AI agents',
       'Retrieval-augmented generation', 'AI integration', 'Machine learning', 'Computer vision', 'MLOps',
@@ -111,6 +112,7 @@ export function headFor(slug, site) {
           operatingSystem: 'Android',
           applicationCategory: 'SocialNetworkingApplication',
           description: 'Social media governed by the people using it: post on a board, vote on what you see, and vote on each other.',
+          url: 'https://www.welikethisone.com/',
           installUrl: 'https://play.google.com/store/apps/details?id=com.welikethisone.app',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
           author: { '@id': `${site}#organization` },

@@ -1,17 +1,17 @@
 import { useRef } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
-import { BookOpen, Award, BarChart3, Sparkles, LayoutDashboard, GraduationCap, Settings, Bell, CheckCircle2, PlayCircle } from 'lucide-react'
+import { BookOpen, Award, BarChart3, Sparkles, LayoutDashboard, GraduationCap, Settings, Bell, CheckCircle2, PlayCircle, ArrowUpRight } from 'lucide-react'
 import { FINHANCE } from '../content'
-import { SplitHeading, Reveal, useInViewOnce } from './fx'
+import { SplitHeading, Reveal, Magnetic, useInViewOnce } from './fx'
 import { dur, ease, stagger, viewport } from '../motion'
 
 const FEATURE_ICONS = [BookOpen, Award, BarChart3, Sparkles]
 
 // Illustrative sample data for the product mock-up.
 const COURSES = [
-  { name: 'Foundations of Personal Finance', pct: 86 },
-  { name: 'Investing 101: Markets & Risk', pct: 62 },
-  { name: 'Credit, Loans & Interest', pct: 38 },
+  { name: 'Workplace Communication', pct: 86 },
+  { name: 'Excel for Business Analysis', pct: 62 },
+  { name: 'Interview Readiness', pct: 38 },
 ]
 const CHART = [12, 18, 15, 26, 22, 34, 31, 42, 39, 50, 47, 58]
 
@@ -39,9 +39,9 @@ function Dashboard() {
   const max = Math.max(...CHART)
   const pts = CHART.map((v, i) => `${(i / (CHART.length - 1)) * 300},${100 - (v / max) * 88}`).join(' ')
   return (
-    <div className="dash" ref={ref} role="img" aria-label="Finhance LMS dashboard preview showing course progress, learning activity chart and an AI study suggestion">
+    <div className="dash" ref={ref} role="img" aria-label="FinHance LMS dashboard preview showing skill-path progress, learning activity and an AI career suggestion">
       <aside className="dash-side" aria-hidden="true">
-        <div className="dash-logo"><span className="dash-logo-mark">F</span> Finhance</div>
+        <div className="dash-logo"><span className="dash-logo-mark">F</span> FinHance</div>
         {[LayoutDashboard, BookOpen, GraduationCap, BarChart3, Settings].map((I, i) => (
           <span key={i} className={`dash-nav ${i === 0 ? 'is-on' : ''}`}><I size={16} /></span>
         ))}
@@ -50,7 +50,7 @@ function Dashboard() {
         <div className="dash-top">
           <div>
             <small className="mono">Welcome back</small>
-            <strong>Your learning journey</strong>
+            <strong>Your career path</strong>
           </div>
           <span className="dash-bell"><Bell size={16} /><i /></span>
         </div>
@@ -115,7 +115,7 @@ function Dashboard() {
           transition={{ delay: 1.6, duration: dur.base, ease: ease.out }}
         >
           <Sparkles size={16} />
-          <span><b>AI tutor:</b> You’re strongest on budgeting. Try the “Compound Interest” quiz next to unlock Investing II.</span>
+          <span><b>AI guide:</b> Your communication skills are strong. Finish “Data Analysis Basics” next to unlock the Business Analyst path.</span>
         </motion.div>
       </div>
     </div>
@@ -139,6 +139,14 @@ export default function Finhance() {
           <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />{FINHANCE.eyebrow}</Reveal>
           <SplitHeading lines={[FINHANCE.title]} accent={['LMS']} className="h2 h2-xl" />
           <Reveal as="p" className="lead section-lead" delay={0.15}>{FINHANCE.sub}</Reveal>
+          <Reveal delay={0.25}>
+            <Magnetic>
+              <a className="btn btn-ghost" href={FINHANCE.url} target="_blank" rel="noopener noreferrer">
+                Visit finhance.ai <ArrowUpRight size={18} aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </Magnetic>
+          </Reveal>
         </div>
 
         <div className="dash-stage">

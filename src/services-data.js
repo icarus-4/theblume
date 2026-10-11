@@ -101,7 +101,7 @@ export const SERVICE_PAGES = [
     stack: ['GPT', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Embeddings', 'Vector search', 'Structured outputs', 'LangChain-style orchestration', 'Python', 'Node.js'],
     proof: {
       title: 'Built with the same care as our own products',
-      body: 'We build and run our own software, including the Finhance LMS and two Android apps, so we design generative AI features with real users, real data and long-term maintenance in mind, not just a demo.',
+      body: 'We build and run our own software, including the FinHance LMS and two Android apps, so we design generative AI features with real users, real data and long-term maintenance in mind, not just a demo.',
     },
     faqs: [
       { q: 'What is generative AI development?', a: 'Generative AI development is building software that uses models such as large language models to create text, code, images or structured data, and connecting those models to a company’s data, tools and users with the right quality checks and safeguards.' },
@@ -213,7 +213,7 @@ export const SERVICE_PAGES = [
     stack: ['OpenAI API', 'Anthropic API', 'Gemini API', 'Azure AI', 'Google Vertex AI', 'REST & GraphQL', 'Webhooks', 'Node.js', 'Python', 'React', 'React Native'],
     proof: {
       title: 'We integrate into products we know from the inside',
-      body: 'We designed and built the Finhance LMS and ship our own Android apps, so we understand the constraints of adding features to live products: existing users, existing data and zero tolerance for downtime.',
+      body: 'We designed and built the FinHance LMS and ship our own Android apps, so we understand the constraints of adding features to live products: existing users, existing data and zero tolerance for downtime.',
     },
     faqs: [
       { q: 'What are AI integration services?', a: 'AI integration services connect AI models, such as large language models or machine learning models, to a company’s existing software through APIs, adding features like summarisation, search, extraction and assistants without rebuilding the product.' },
@@ -424,13 +424,13 @@ export const SERVICE_PAGES = [
     offerings: [
       { title: 'Web platforms & portals', body: 'Customer portals, marketplaces and dashboards built with modern web frameworks and fast, accessible interfaces.' },
       { title: 'SaaS product development', body: 'Multi-tenant products with subscriptions, roles, onboarding, analytics and room to scale.' },
-      { title: 'Learning management systems', body: 'Course delivery, assessments, certificates and analytics, as in the LMS we built for Finhance.' },
+      { title: 'Learning management systems', body: 'Course delivery, assessments, certificates and analytics, as in the LMS we built for FinHance.' },
       { title: 'Internal tools & automation', body: 'Admin panels, approval workflows and reporting tools that replace spreadsheets and email chains.' },
       { title: 'APIs & integrations', body: 'REST and GraphQL APIs plus integrations with payment, CRM, ERP and messaging systems.' },
       { title: 'Modernisation', body: 'Gradual rebuilds of legacy systems with careful data migration and no big-bang cut-overs.' },
     ],
     useCases: [
-      { industry: 'Education', body: 'A complete learning management system with structured paths, assessments and progress analytics.' },
+      { industry: 'Education & careers', body: 'A complete learning management system with structured paths, assessments and progress analytics, like the one behind FinHance.' },
       { industry: 'FinTech', body: 'Back-office platforms for onboarding, document checks and reporting with full audit trails.' },
       { industry: 'Healthcare', body: 'Scheduling and patient-communication tools with strict access control and data protection.' },
       { industry: 'Startups', body: 'MVPs that validate an idea quickly, built on foundations that can scale if it takes off.' },
@@ -443,8 +443,8 @@ export const SERVICE_PAGES = [
     ],
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'REST', 'GraphQL', 'Docker', 'AWS', 'Azure', 'GCP'],
     proof: {
-      title: 'Finhance LMS, designed and built by theBlume',
-      body: 'We designed and built a learning management system for Finhance, turning finance education into structured, trackable learning. It is the kind of long-lived, data-rich platform our engineering process is built for.',
+      title: 'FinHance LMS, designed and built by theBlume',
+      body: 'We designed and built the learning management system behind FinHance, which connects career direction, role-relevant skills and practical learning for learners, colleges and employers. It is the kind of long-lived, data-rich platform our engineering process is built for.',
     },
     faqs: [
       { q: 'What is custom software development?', a: 'Custom software development is designing and building software tailored to an organisation’s own processes, users and data, such as web platforms, SaaS products, internal tools and APIs, rather than adapting a generic off-the-shelf product.' },
@@ -561,7 +561,7 @@ export const SERVICE_PAGES = [
     stack: ['Figma', 'Prototyping', 'Design systems', 'Design tokens', 'WCAG 2.2', 'Usability testing', 'Motion design', 'Framer Motion'],
     proof: {
       title: 'Designed by the team that builds it',
-      body: 'This website, the Finhance LMS and our own apps were designed and built by the same team. That keeps designs realistic to build, fast in production and faithful to the original intent.',
+      body: 'This website, the FinHance LMS and our own apps were designed and built by the same team. That keeps designs realistic to build, fast in production and faithful to the original intent.',
     },
     faqs: [
       { q: 'What is the difference between UI and UX design?', a: 'UX (user experience) design is about how a product works: the flows, structure and ease of reaching a goal. UI (user interface) design is about how it looks and feels: layout, typography, colour, components and motion. Good products need both.' },

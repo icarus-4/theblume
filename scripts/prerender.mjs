@@ -65,8 +65,8 @@ ${pageIndex(site).map(([name, url, desc]) => `- [${name}](${url}): ${desc}`).joi
 ${AI_SERVICES.map((s) => `- ${s.title}: ${s.body}`).join('\n')}
 
 ## Our products
-- Finhance LMS: a learning management system theBlume designed and built for Finhance.
-${APPS.map((a) => `- ${a.name}${a.subtitle ? ` (${a.subtitle})` : ''}: ${a.tagline}${a.status === 'live' && a.url ? ` ${a.url}` : ' Coming soon.'}`).join('\n')}
+- FinHance LMS (https://www.finhance.ai/): the learning management system theBlume designed and built for FinHance, connecting career direction, role-relevant skills, practical learning and career readiness for learners, colleges and employers in India.
+${APPS.map((a) => `- ${a.name}${a.subtitle ? ` (${a.subtitle})` : ''}${a.website ? ` (${a.website})` : ''}: ${a.tagline}${a.status === 'live' && a.url ? ` Google Play: ${a.url}` : ' Coming soon to app stores.'}`).join('\n')}
 
 ## FAQ
 ${FAQS.map((f) => `### ${f.q}\n${f.a}`).join('\n\n')}
