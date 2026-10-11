@@ -1,7 +1,7 @@
 # theBlume
 
 Website for **theBlume** — an AI development and software company. Live at
-<https://theblume.in/>.
+<https://icarus-4.github.io/theblume/>.
 
 A motion-driven React site (Vite, framer-motion, three.js particle field, Lenis
 smooth scrolling) with a home page, a services hub and 11 dedicated service
@@ -33,9 +33,8 @@ npm run preview    # serve dist/ exactly as it will be deployed
 | Per-page titles, meta tags, JSON-LD | `src/seo.js` |
 | Site URL (canonical, sitemap, Open Graph) | `.env` → `VITE_SITE_URL` |
 
-The site is served on the custom domain `theblume.in` (DNS at GoDaddy pointing
-to GitHub Pages). If the domain ever changes, update `VITE_SITE_URL` and the
-custom domain in the repository's Pages settings together.
+Moving to a custom domain: set `VITE_SITE_URL` to the new URL (for example
+`https://theblume.com/`) and add the domain in the repository's Pages settings.
 
 ## Deploy
 
