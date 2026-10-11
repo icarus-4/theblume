@@ -1,0 +1,84 @@
+/* ---------- Shared: whole-card links ---------- */
+/* The heading link stretches over its card, so the card is one big target
+   while the accessible name stays the heading text. */
+.stretched::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+.stretched:focus-visible {
+  outline: none;
+}
+.stretched:focus-visible::after {
+  outline: 2px solid var(--green-300);
+  outline-offset: 3px;
+}
+
+/* ---------- Footer ---------- */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-block: 56px 32px;
+}
+.footer-brand-col {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.footer-brand-col p {
+  color: var(--muted);
+  max-width: 38ch;
+  font-size: 0.95rem;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  font-size: 1.6rem;
+}
+.footer-h {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-200);
+  margin-bottom: 14px;
+}
+.footer-cols ul {
+  display: grid;
+  gap: 2px;
+}
+.footer-cols ul a {
+  display: inline-block;
+  padding: 7px 0;
+  color: var(--muted);
+  transition: color 0.25s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.footer-cols ul a:hover {
+  color: var(--text);
+  transform: translateX(4px);
+}
+.footer-bottom {
+  padding-bottom: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 480px) {
+  .footer-cols {
+    grid-template-columns: 1fr;
+  }
+}
