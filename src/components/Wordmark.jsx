@@ -1,9 +1,8 @@
-// Brand rule: "the" sits small, "Blume" is highlighted.
+// Brand: the company name is "Ivies", set in white (green belongs to the logo only).
 export default function Wordmark({ className = '' }) {
   return (
-    <span className={`wordmark ${className}`} aria-label="theBlume">
-      <span className="wordmark-the" aria-hidden="true">the</span>
-      <span className="wordmark-blume" aria-hidden="true">Blume</span>
+    <span className={`wordmark ${className}`}>
+      <span className="wordmark-name">Ivies</span>
     </span>
   )
 }

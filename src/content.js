@@ -1,5 +1,5 @@
 // All site copy lives here so it can be edited without touching components.
-export const CONTACT_EMAIL = 'hello@theblume.in'
+export const CONTACT_EMAIL = 'hello@theivies.in'
 
 // "Start a project" form. The site is static, so submissions need a form
 // service: paste its endpoint here (e.g. https://formspree.io/f/xxxxxx).
@@ -24,7 +24,7 @@ export const HERO = {
   eyebrow: 'AI development & software company',
   lines: ['Ideas, grown into', 'intelligent software.'],
   rotating: ['AI agents', 'generative AI apps', 'mobile apps', 'custom software', 'AI integrations', 'tech support'],
-  sub: 'theBlume is an AI development company. We build generative AI apps, AI agents and custom software, integrate AI into the products you already run, and support it all after launch.',
+  sub: 'Ivies is an AI development company. We build generative AI apps, AI agents and custom software, integrate AI into the products you already run, and support it all after launch.',
   pills: ['FinTech', 'EdTech', 'Healthcare', 'Retail', 'Logistics'],
 }
 
@@ -104,8 +104,8 @@ export const AI_SERVICES = [
 // Visible FAQ — written as direct, quotable answers (helps AI answer engines).
 export const FAQS = [
   {
-    q: 'What does theBlume do?',
-    a: 'theBlume is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products: the Android apps welikethisone, Fairly and dashtr, and LANClip for Windows and Android.',
+    q: 'What does Ivies do?',
+    a: 'Ivies is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products: the Android apps welikethisone, Fairly and dashtr, and LANClip for Windows and Android.',
   },
   {
     q: 'What AI development services do you offer?',
@@ -217,9 +217,9 @@ export const AI_CONSOLE = [
   { role: 'agent', text: 'Drafted fixes for 2 of 3 and opened pull requests. Want me to notify the on-call engineer?' },
 ]
 
-// Apps theBlume has built (Android, plus LANClip on Windows). `icon` is an optional image path in /public
+// Apps Ivies has built (Android, plus LANClip on Windows). `icon` is an optional image path in /public
 // (e.g. 'apps/welikethisone.png'); without one a drawn icon is used.
-// TODO(theBlume): add Play Store links for Fairly, dashtr and LANClip when they launch (status → 'live').
+// TODO(Ivies): add Play Store links for Fairly, dashtr and LANClip when they launch (status → 'live').
 export const APPS = [
   {
     key: 'welikethisone',

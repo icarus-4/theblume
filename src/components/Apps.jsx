@@ -407,7 +407,7 @@ export default function Apps() {
     <section id="apps" className="section apps" data-shape="3" data-dim="0.35">
       <div className="container">
         <div className="section-head">
-          <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Built by theBlume</Reveal>
+          <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Built by Ivies</Reveal>
           <SplitHeading lines={['Apps', 'we’ve built.']} accent={['built']} className="h2" />
           <Reveal as="p" className="lead section-lead" delay={0.15}>
             We don’t just build for clients. These are our own Android and Windows apps, designed, engineered and launched by our team.

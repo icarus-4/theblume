@@ -1,7 +1,7 @@
-# theBlume
+# Ivies
 
-Website for **theBlume** — an AI development and software company. Live at
-<https://www.theblume.in/>.
+Website for **Ivies** (formerly theBlume) — an AI development and software
+company. Live at <https://www.theivies.in/> (www.theblume.in redirects there).
 
 A motion-driven React site (Vite, framer-motion, three.js particle field, Lenis
 smooth scrolling) with a home page, a services hub and 11 dedicated service
@@ -36,9 +36,10 @@ npm run preview    # serve dist/ exactly as it will be deployed
 ## Hosting
 
 The site is hosted on AWS (S3 + CloudFront, account resources tagged
-`Project=theblume`, isolated from other projects). DNS for `theblume.in` stays
-at GoDaddy: `www` is a CNAME to CloudFront and the bare domain forwards to
-`https://www.theblume.in`. If the domain ever changes, update `VITE_SITE_URL`
+`Project=theblume` from the original name, isolated from other projects). DNS
+for `theivies.in` and the old `theblume.in` stays at GoDaddy: each `www` is a
+CNAME to CloudFront, and each bare domain forwards to `https://www.theivies.in`.
+A CloudFront function 301-redirects `www.theblume.in` to `www.theivies.in`. If the domain ever changes, update `VITE_SITE_URL`
 and the CloudFront alternate domain names together.
 
 ## Deploy

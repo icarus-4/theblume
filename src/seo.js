@@ -5,19 +5,19 @@ import { SERVICE_PAGES, SERVICES_HUB, pageBySlug } from './services-data.js'
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 const HOME = {
-  title: 'AI Development & Software Company | theBlume',
+  title: 'AI Development & Software Company | Ivies',
   description:
     'AI development company building generative AI apps, AI agents and AI integrations, plus custom software, mobile apps and tech support for every industry.',
-  ogTitle: 'theBlume — AI Development & Software Company',
+  ogTitle: 'Ivies — AI Development & Software Company',
   ogDescription:
-    'Generative AI apps, AI agents, AI integration, custom software and mobile apps — designed, built and supported by theBlume.',
+    'Generative AI apps, AI agents, AI integration, custom software and mobile apps — designed, built and supported by Ivies.',
 }
 
 function organization(site, full) {
   const org = {
     '@type': 'Organization',
     '@id': `${site}#organization`,
-    name: 'theBlume',
+    name: 'Ivies',
     url: site,
     logo: { '@type': 'ImageObject', url: `${site}logo-mark.png`, width: 256, height: 256 },
     image: `${site}og-image.png`,
@@ -30,9 +30,9 @@ function organization(site, full) {
   return {
     ...org,
     description:
-      'theBlume is an AI development and software company that builds generative AI apps, AI agents, AI integrations, custom software, Android and iOS apps, and provides tech support for businesses in every industry.',
+      'Ivies is an AI development and software company that builds generative AI apps, AI agents, AI integrations, custom software, Android and iOS apps, and provides tech support for businesses in every industry.',
     slogan: 'Ideas, grown into intelligent software.',
-    email: 'hello@theblume.in',
+    email: 'hello@theivies.in',
     knowsAbout: [
       'Artificial intelligence development', 'Generative AI', 'Large language models', 'AI agents',
       'Retrieval-augmented generation', 'AI integration', 'Machine learning', 'Computer vision', 'MLOps',
@@ -61,14 +61,14 @@ function tags({ title, description, url, ogTitle, ogDescription, site, graph }) 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <link rel="canonical" href="${url}" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="theBlume" />
+    <meta property="og:site_name" content="Ivies" />
     <meta property="og:url" content="${url}" />
     <meta property="og:title" content="${esc(ogTitle || title)}" />
     <meta property="og:description" content="${esc(ogDescription || description)}" />
     <meta property="og:image" content="${site}og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="theBlume logo with the words AI development, software and apps" />
+    <meta property="og:image:alt" content="Ivies logo with the words AI development, software and apps" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${esc(ogTitle || title)}" />
@@ -83,7 +83,7 @@ export function headFor(slug, site) {
     '@type': 'WebSite',
     '@id': `${site}#website`,
     url: site,
-    name: 'theBlume',
+    name: 'Ivies',
     inLanguage: 'en',
     publisher: { '@id': `${site}#organization` },
   }

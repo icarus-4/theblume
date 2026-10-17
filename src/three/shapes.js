@@ -202,7 +202,7 @@ export function helix(count, r = rng(53)) {
   return out
 }
 
-// 5 — theBlume logo, sampled from the bright pixels of /logo.png (contact).
+// 5 — Ivies logo, sampled from the bright pixels of /logo.png (contact).
 // Returns { positions, colors } or null if the image can't be read.
 export async function logoShape(count, src, r = rng(67)) {
   const img = new Image()

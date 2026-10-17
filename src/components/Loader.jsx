@@ -34,7 +34,7 @@ export default function Loader({ onDone }) {
     <motion.div
       className="loader"
       role="status"
-      aria-label="Loading theBlume"
+      aria-label="Loading Ivies"
       onClick={onDone}
       exit={{ clipPath: 'inset(0 0 100% 0)', transition: { duration: 0.7, ease: ease.inOut } }}
     >

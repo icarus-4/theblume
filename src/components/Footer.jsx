@@ -19,7 +19,7 @@ export default function Footer({ isHome, onNavigate }) {
     <footer className="footer" data-shape="5" data-dim="0">
       <div className="container footer-cols">
         <div className="footer-brand-col">
-          <a href={pageHref()} className="footer-brand" aria-label="theBlume home">
+          <a href={pageHref()} className="footer-brand" aria-label="Ivies home">
             <img src={`${import.meta.env.BASE_URL}logo-mark.png`} alt="" width="44" height="44" />
             <Wordmark />
           </a>
@@ -49,10 +49,10 @@ export default function Footer({ isHome, onNavigate }) {
         </nav>
       </div>
       <div className="container footer-bottom">
-        <p className="mono footer-copy">© {new Date().getFullYear()} theBlume. Technology that grows with you.</p>
+        <p className="mono footer-copy">© {new Date().getFullYear()} Ivies. Technology that grows with you.</p>
       </div>
       <div className="footer-giant" aria-hidden="true">
-        <span className="wordmark-the">the</span>Blume
+        Ivies
       </div>
     </footer>
   )

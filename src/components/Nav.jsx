@@ -64,7 +64,7 @@ export default function Nav({ route, onNavigate, onStartProject }) {
         animate={{ y: hidden ? '-120%' : '0%' }}
         transition={{ duration: hidden ? dur.exit : dur.base, ease: hidden ? ease.in : ease.out }}
       >
-        <a href={pageHref()} className="nav-brand" onClick={isHome ? (e) => go(e, 'top') : undefined} aria-label="theBlume home">
+        <a href={pageHref()} className="nav-brand" onClick={isHome ? (e) => go(e, 'top') : undefined} aria-label="Ivies home">
           <img src={`${import.meta.env.BASE_URL}logo-mark.png`} alt="" width="40" height="40" />
           <Wordmark />
         </a>

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Upload dist/ to the theBlume S3 bucket and refresh CloudFront.
+# Upload dist/ to the website S3 bucket and refresh CloudFront.
 # Used by .github/workflows/deploy.yml; can also be run locally after
-# `npm run build` with AWS credentials for the theBlume account.
+# `npm run build` with AWS credentials for the AWS account that hosts the site.
 set -euo pipefail
 : "${S3_BUCKET:?set S3_BUCKET}" "${CF_DISTRIBUTION_ID:?set CF_DISTRIBUTION_ID}"
 

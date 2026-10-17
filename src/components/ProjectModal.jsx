@@ -5,7 +5,7 @@ import { CONTACT_EMAIL, FORM_ENDPOINT, PROJECT_FORM } from '../content'
 import Wordmark from './Wordmark'
 import { dur, ease, spring } from '../motion'
 
-const DRAFT_KEY = 'theblume:project-draft'
+const DRAFT_KEY = 'ivies:project-draft'
 const EMPTY = { name: '', email: '', company: '', phone: '', services: [], budget: PROJECT_FORM.budgets[0], details: '' }
 
 const LABELS = { name: 'Full name', email: 'Work email', services: 'Services', details: 'Project details' }

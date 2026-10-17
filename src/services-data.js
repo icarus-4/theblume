@@ -1,7 +1,7 @@
 // Content for the dedicated service pages (one prerendered URL each).
 // Every page is written to stand on its own: unique copy, 800+ words,
 // specific offerings, use cases, delivery steps and FAQs (ui/seo quality gates).
-// Proof points reference only theBlume's own shipped work.
+// Proof points reference only Ivies's own shipped work.
 
 export const SERVICE_PAGES = [
   // ───────────────────────────── AI ─────────────────────────────
@@ -10,7 +10,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'AI Development',
     h1: 'AI development company',
-    metaTitle: 'AI Development Company & Services | theBlume',
+    metaTitle: 'AI Development Company & Services | Ivies',
     metaDescription:
       'AI development company building generative AI apps, AI agents, chatbots, machine learning models and AI integrations, from prototype to production.',
     eyebrow: 'AI development services',
@@ -18,7 +18,7 @@ export const SERVICE_PAGES = [
     lead: 'We design, build and run AI that does real work inside your business: generative AI products, AI agents, assistants that know your data, and machine learning models, all engineered for production rather than demos.',
     overview: [
       'AI development is the work of turning a business problem into a reliable AI system: choosing the right model, connecting it to your data and tools, testing how it behaves, and running it safely at scale. Most AI projects that stall do so at that last step. A prototype that impresses in a meeting still has to handle messy inputs, real users, cost limits and privacy rules.',
-      'theBlume builds AI the same way we build any software: with clear requirements, measurable quality, version control, monitoring and support after launch. We are model-agnostic, so we pick GPT, Claude, Gemini, open models such as Llama, or a classic machine learning model depending on accuracy, latency, cost and where your data is allowed to go.',
+      'Ivies builds AI the same way we build any software: with clear requirements, measurable quality, version control, monitoring and support after launch. We are model-agnostic, so we pick GPT, Claude, Gemini, open models such as Llama, or a classic machine learning model depending on accuracy, latency, cost and where your data is allowed to go.',
       'Because we are a full-stack team, the AI never lives on its own. We also build the app, the dashboard, the API and the integrations around it, so the result is a product your team and customers can actually use.',
     ],
     offerings: [
@@ -67,7 +67,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'Generative AI',
     h1: 'Generative AI development services',
-    metaTitle: 'Generative AI Development Services | theBlume',
+    metaTitle: 'Generative AI Development Services | Ivies',
     metaDescription:
       'Generative AI development: LLM apps, copilots and RAG assistants on GPT, Claude, Gemini or open models, with evaluation and guardrails built in.',
     eyebrow: 'Generative AI',
@@ -123,7 +123,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'AI Agents',
     h1: 'AI agent development services',
-    metaTitle: 'AI Agent Development Services | theBlume',
+    metaTitle: 'AI Agent Development Services | Ivies',
     metaDescription:
       'AI agent development: agents that plan multi-step work, use your tools and APIs, and complete tasks with human approval, for ops, support and sales.',
     eyebrow: 'AI agents',
@@ -179,7 +179,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'AI Integration',
     h1: 'AI integration services',
-    metaTitle: 'AI Integration Services for Your Software | theBlume',
+    metaTitle: 'AI Integration Services for Your Software | Ivies',
     metaDescription:
       'AI integration services: add OpenAI, Anthropic, Google or Azure AI to your CRM, ERP, LMS, website or mobile app, securely and without a rebuild.',
     eyebrow: 'AI integration',
@@ -188,7 +188,7 @@ export const SERVICE_PAGES = [
     overview: [
       'AI integration means adding capabilities such as summarisation, search, classification, extraction, recommendations or conversational help to existing software through APIs, without replacing that software. It is usually the fastest and lowest-risk way for an established business to get value from AI.',
       'The engineering challenge is the connection itself: getting the right data to the model at the right moment, respecting user permissions, handling failures gracefully, keeping latency low and making sure costs stay predictable as usage grows.',
-      'theBlume integrates models from OpenAI, Anthropic, Google, Microsoft Azure and open-source providers into web platforms, mobile apps, learning management systems, CRMs, ERPs and internal tools. Our experience building and running our own apps means we understand both sides: the AI and the product it lives in.',
+      'Ivies integrates models from OpenAI, Anthropic, Google, Microsoft Azure and open-source providers into web platforms, mobile apps, learning management systems, CRMs, ERPs and internal tools. Our experience building and running our own apps means we understand both sides: the AI and the product it lives in.',
     ],
     offerings: [
       { title: 'AI in your CRM & ERP', body: 'Automatic summaries, next-step suggestions, data clean-up and smart search inside the business systems your team uses.' },
@@ -235,7 +235,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'AI Chatbots',
     h1: 'AI chatbot development services',
-    metaTitle: 'AI Chatbot Development Services | theBlume',
+    metaTitle: 'AI Chatbot Development Services | Ivies',
     metaDescription:
       'AI chatbot development for websites, apps and support teams: assistants that answer from your knowledge base and hand off to a person when needed.',
     eyebrow: 'AI chatbots',
@@ -292,7 +292,7 @@ export const SERVICE_PAGES = [
     kind: 'ai',
     navTitle: 'Machine Learning',
     h1: 'Machine learning development services',
-    metaTitle: 'Machine Learning Development Services | theBlume',
+    metaTitle: 'Machine Learning Development Services | Ivies',
     metaDescription:
       'Machine learning development: forecasting, risk scoring, recommendations, computer vision and OCR models trained on your data and run in production.',
     eyebrow: 'Machine learning & computer vision',
@@ -301,7 +301,7 @@ export const SERVICE_PAGES = [
     overview: [
       'Machine learning (ML) is a branch of AI where models learn patterns from historical data to make predictions or decisions on new data. It powers demand forecasts, fraud and risk scores, recommendations, churn prediction and computer vision tasks such as reading text from images.',
       'For many business problems a well-built ML model is cheaper, faster and more accurate than a large language model. The work is mostly about data: cleaning it, choosing the right features, validating honestly so results hold up in the real world, and monitoring the model as conditions change.',
-      'theBlume handles the full lifecycle, from data preparation and model training to deployment as an API, inside a dashboard or on-device in a mobile app, plus the monitoring that keeps it accurate.',
+      'Ivies handles the full lifecycle, from data preparation and model training to deployment as an API, inside a dashboard or on-device in a mobile app, plus the monitoring that keeps it accurate.',
     ],
     offerings: [
       { title: 'Predictive analytics & forecasting', body: 'Demand, revenue, inventory and capacity forecasts that planning teams can act on.' },
@@ -351,7 +351,7 @@ export const SERVICE_PAGES = [
     kind: 'build',
     navTitle: 'App Development',
     h1: 'Mobile app development company',
-    metaTitle: 'Mobile App Development Company | theBlume',
+    metaTitle: 'Mobile App Development Company | Ivies',
     metaDescription:
       'Mobile app development for Android and iOS: cross-platform and native apps, backends, AI features, store launch and ongoing support from one team.',
     eyebrow: 'App development',
@@ -359,7 +359,7 @@ export const SERVICE_PAGES = [
     lead: 'We design, build and launch Android and iOS apps, and we publish our own apps on Google Play, so we know what it takes to ship and keep an app healthy.',
     overview: [
       'Mobile app development covers everything from product design and the app itself to the backend, the store listing and the updates that follow. A successful app is fast, reliable on cheap phones and flaky networks, accessible, and easy to keep improving after launch.',
-      'theBlume builds native and cross-platform apps. For most products we use React Native with Expo or Flutter to ship Android and iOS from one codebase without compromising the feel of each platform, and we go native where performance or platform features demand it.',
+      'Ivies builds native and cross-platform apps. For most products we use React Native with Expo or Flutter to ship Android and iOS from one codebase without compromising the feel of each platform, and we go native where performance or platform features demand it.',
       'We also bring AI into mobile apps: on-device recognition, smart search, assistants and personalisation, designed to protect privacy and battery life.',
       'Performance and reliability are designed in from the start: offline support where users need it, careful handling of slow networks, and attention to app size and battery use on lower-end devices.',
     ],
@@ -409,7 +409,7 @@ export const SERVICE_PAGES = [
     kind: 'build',
     navTitle: 'Software Development',
     h1: 'Custom software development services',
-    metaTitle: 'Custom Software Development Services | theBlume',
+    metaTitle: 'Custom Software Development Services | Ivies',
     metaDescription:
       'Custom software development: web platforms, SaaS products, internal tools and APIs engineered for reliability, with AI built in where it adds value.',
     eyebrow: 'Software development',
@@ -443,7 +443,7 @@ export const SERVICE_PAGES = [
     ],
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'REST', 'GraphQL', 'Docker', 'AWS', 'Azure', 'GCP'],
     proof: {
-      title: 'Fairly, engineered end to end by theBlume',
+      title: 'Fairly, engineered end to end by Ivies',
       body: 'Our shared-expense app Fairly runs on a money engine backed by more than 500 automated tests, with versioned database migrations checked against real upgrades. It is the kind of long-lived, well-tested software our engineering process is built for.',
     },
     faqs: [
@@ -467,7 +467,7 @@ export const SERVICE_PAGES = [
     kind: 'build',
     navTitle: 'Cloud & DevOps',
     h1: 'Cloud & DevOps services',
-    metaTitle: 'Cloud & DevOps Services | theBlume',
+    metaTitle: 'Cloud & DevOps Services | Ivies',
     metaDescription:
       'Cloud and DevOps services on AWS, Azure and Google Cloud: infrastructure as code, CI/CD, monitoring, security and cost optimisation.',
     eyebrow: 'Cloud & DevOps',
@@ -526,7 +526,7 @@ export const SERVICE_PAGES = [
     kind: 'build',
     navTitle: 'UI / UX Design',
     h1: 'UI/UX design services',
-    metaTitle: 'UI/UX Design Services for Apps & Web | theBlume',
+    metaTitle: 'UI/UX Design Services for Apps & Web | Ivies',
     metaDescription:
       'UI/UX design for web and mobile apps: user research, prototypes, design systems and accessible interfaces, including UX for AI-powered products.',
     eyebrow: 'UI / UX design',
@@ -587,7 +587,7 @@ export const SERVICE_PAGES = [
     kind: 'support',
     navTitle: 'Tech Support',
     h1: 'IT & tech support services',
-    metaTitle: 'IT & Tech Support Services | theBlume',
+    metaTitle: 'IT & Tech Support Services | Ivies',
     metaDescription:
       'Tech support and maintenance for your software, apps and AI systems: monitoring, bug fixes, updates, security patches and a helpdesk that knows your stack.',
     eyebrow: 'Tech support & maintenance',
@@ -595,7 +595,7 @@ export const SERVICE_PAGES = [
     lead: 'Launch is the beginning. We keep your software, apps and AI systems healthy with maintenance, monitoring and a support team that understands how everything fits together.',
     overview: [
       'Tech support and maintenance keep software secure, fast and working as operating systems, browsers, dependencies, AI models and user needs change. Without it, even well-built systems slowly accumulate bugs, security holes and outdated components.',
-      'theBlume provides ongoing support for systems we built and for software built by others after an onboarding review. You get a predictable plan covering monitoring, fixes, updates and small improvements, plus a clear way to raise issues and track them to resolution.',
+      'Ivies provides ongoing support for systems we built and for software built by others after an onboarding review. You get a predictable plan covering monitoring, fixes, updates and small improvements, plus a clear way to raise issues and track them to resolution.',
       'For AI systems, support also means watching answer quality and cost, re-running evaluations when models change and updating prompts and data as your business evolves.',
       'Good support is proactive. We schedule updates before they become urgent, trace recurring issues to their root cause and share a monthly summary, so you always know the health of your systems and what we recommend next.',
     ],
@@ -646,9 +646,9 @@ export const SERVICE_PAGES = [
 export const SERVICES_HUB = {
   slug: 'services',
   h1: 'Technology services',
-  metaTitle: 'AI, Software & App Development Services | theBlume',
+  metaTitle: 'AI, Software & App Development Services | Ivies',
   metaDescription:
-    'theBlume services: AI development, generative AI, AI agents, AI integration, chatbots, machine learning, apps, software, cloud, UI/UX and tech support.',
+    'Ivies services: AI development, generative AI, AI agents, AI integration, chatbots, machine learning, apps, software, cloud, UI/UX and tech support.',
   lead: 'Everything you need to build, run and grow software, with AI woven into every layer. Explore each service below.',
   groups: [
     { kind: 'ai', title: 'AI development', intro: 'Generative AI, agents, chatbots, integrations and machine learning, built for production.' },

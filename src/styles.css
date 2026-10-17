@@ -1,5 +1,5 @@
 /* ==========================================================================
-   theBlume — design tokens
+   Ivies — design tokens
    Palette from the logo: black field, white strokes, leaf-green gradient.
    ========================================================================== */
 :root {
@@ -226,25 +226,17 @@ main,
   mix-blend-mode: difference;
 }
 
-/* ---------- Wordmark: small "the", highlighted "Blume" ---------- */
+/* ---------- Wordmark: "Ivies" in white (green stays in the logo) ---------- */
 .wordmark {
   display: inline-flex;
   align-items: baseline;
   font-family: var(--font-display);
   line-height: 1;
-  letter-spacing: -0.02em;
 }
-.wordmark-the {
-  font-size: 0.55em;
-  font-weight: 400;
-  color: var(--muted);
-  margin-right: 0.08em;
-  letter-spacing: 0;
-}
-.wordmark-blume {
-  font-size: 1em;
+.wordmark-name {
   font-weight: 700;
-  color: var(--text); /* brand rule: green belongs to the logo only */
+  letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 /* ---------- Buttons ---------- */
@@ -1452,10 +1444,6 @@ main,
   background-clip: text;
   color: transparent;
   user-select: none;
-}
-.footer-giant .wordmark-the {
-  font-size: 0.4em;
-  color: inherit;
 }
 
 /* ---------- Start-a-project modal ---------- */

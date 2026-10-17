@@ -54,9 +54,9 @@ ${slugs.map((s) => `  <url>\n    <loc>${site}${s ? `${s}/` : ''}</loc>\n    <las
 
 writeFileSync(
   resolve(dist, 'llms.txt'),
-  `# theBlume
+  `# Ivies
 
-> theBlume is an AI development and software company. We build generative AI apps, AI agents, RAG knowledge assistants and machine learning systems, integrate AI into existing software, and deliver custom software, Android and iOS apps, cloud and DevOps, UI/UX design and ongoing tech support for businesses in every industry.
+> Ivies is an AI development and software company. We build generative AI apps, AI agents, RAG knowledge assistants and machine learning systems, integrate AI into existing software, and deliver custom software, Android and iOS apps, cloud and DevOps, UI/UX design and ongoing tech support for businesses in every industry.
 
 ## Service pages
 ${pageIndex(site).map(([name, url, desc]) => `- [${name}](${url}): ${desc}`).join('\n')}

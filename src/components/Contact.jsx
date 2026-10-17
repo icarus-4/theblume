@@ -15,7 +15,7 @@ export default function Contact({ onStartProject }) {
     }
   }
 
-  // The particles gather into the theBlume logo behind this section.
+  // The particles gather into the Ivies logo behind this section.
   return (
     <section id="contact" className="section contact" data-shape="5" data-dim="0.95">
       <div className="contact-spacer" aria-hidden="true" />
