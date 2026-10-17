@@ -39,7 +39,8 @@ The site is hosted on AWS (S3 + CloudFront, account resources tagged
 `Project=theblume` from the original name, isolated from other projects). DNS
 for `theivies.in` and the old `theblume.in` stays at GoDaddy: each `www` is a
 CNAME to CloudFront, and each bare domain forwards to `https://www.theivies.in`.
-A CloudFront function 301-redirects `www.theblume.in` to `www.theivies.in`. If the domain ever changes, update `VITE_SITE_URL`
+A CloudFront function (`infra/cloudfront-function.js`) 301-redirects
+`www.theblume.in` to the same path on `www.theivies.in` and serves clean URLs. If the domain ever changes, update `VITE_SITE_URL`
 and the CloudFront alternate domain names together.
 
 ## Deploy
