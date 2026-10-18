@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import { VIA } from '../via-data'
 import { pageHref } from '../routes'
 import { Reveal, Magnetic } from './fx'
-import { ViaScreen } from './ViaMock'
+import { BrowserShot, VIA_SHOTS } from './ViaShots'
 import '../via-page.css'
 
 // Home-page spotlight for Via, Ivies' main product. Links to /via/.
@@ -12,7 +12,8 @@ export default function ViaFeature() {
   const ref = useRef(null)
   const reduce = useReducedMotion()
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
-  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [60, -60])
+  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [50, -50])
+  const rot = useTransform(scrollYProgress, [0, 0.5], reduce ? [0, 0] : [-10, -3])
 
   return (
     <section id="via" ref={ref} className="section" data-shape="0" data-dim="0.35">
@@ -42,11 +43,8 @@ export default function ViaFeature() {
               </Magnetic>
             </div>
           </div>
-          <motion.div className="via-feature-phone" style={{ y }}>
-            <div className="phone-frame">
-              <span className="phone-cam" aria-hidden="true" />
-              <ViaScreen />
-            </div>
+          <motion.div className="via-feature-shot" style={{ y, rotateY: rot, transformPerspective: 1400 }}>
+            <BrowserShot shot={VIA_SHOTS[0]} />
           </motion.div>
         </Reveal>
       </div>

@@ -32,163 +32,117 @@
   max-width: 20ch;
 }
 
-/* hero composition: recruiter browser + candidate phone */
+/* hero: real screenshot in a browser frame */
 .via-hero-visual {
   position: relative;
-  padding-bottom: 60px;
-  padding-right: 120px; /* room for the phone, so it doesn't cover the match scores */
 }
-.via-hero-phone {
+.via-hero-glow {
   position: absolute;
-  right: -10px;
-  bottom: -40px;
-  transform-origin: bottom right;
-}
-.via-hero-phone .phone-frame {
-  width: 200px;
-  transform: rotate(4deg);
-  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(143, 180, 255, 0.2);
-}
-.via-hero-phone .phone-screen {
-  font-size: 0.6rem;
+  inset: 10% 5% -10%;
+  z-index: -1;
+  background: radial-gradient(ellipse, rgba(143, 180, 255, 0.35), transparent 65%);
+  filter: blur(50px);
 }
 
-.via-browser {
-  width: 100%;
-  max-width: 560px;
-  border-radius: 18px;
+/* browser frame around real Via screenshots */
+.via-shot {
+  margin: 0;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(143, 180, 255, 0.25);
-  background: radial-gradient(120% 80% at 50% 0%, #13224a, #070d1d 70%);
-  box-shadow: 0 50px 120px -40px rgba(0, 0, 0, 0.9), 0 0 60px -20px rgba(143, 180, 255, 0.35);
-  color: #e8eefc;
+  background: #070d1d;
+  box-shadow: 0 50px 120px -40px rgba(0, 0, 0, 0.9), 0 0 60px -24px rgba(143, 180, 255, 0.4);
 }
-.via-browser-bar {
+.via-shot-bar {
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 10px 14px;
   border-bottom: 1px solid #1d2c52;
-  background: rgba(7, 13, 29, 0.7);
+  background: #0b1430;
 }
-.via-browser-bar .dots i {
+.via-shot-bar .dots i {
   background: rgba(255, 255, 255, 0.18);
 }
-.via-browser-bar .dots i:first-child {
+.via-shot-bar .dots i:first-child {
   background: var(--via-accent);
 }
 .via-url {
   flex: 1;
   padding: 4px 12px;
   border-radius: 999px;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   color: #9fb3dd;
   background: rgba(255, 255, 255, 0.05);
 }
-.via-browser-body {
-  display: grid;
-  gap: 14px;
-  padding: 18px;
-}
-.via-rec-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-.via-rec-head b {
+.via-shot img {
   display: block;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
+  width: 100%;
+  height: auto;
 }
-.via-rec-head small {
-  font-size: 0.72rem;
-  color: #9fb3dd;
-}
-.via-rec-count {
-  flex-shrink: 0;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.66rem;
-  color: #cfe0ff;
-  background: rgba(143, 180, 255, 0.14);
-  border: 1px solid rgba(143, 180, 255, 0.3);
-}
-.via-rec-list {
+
+/* product tour */
+.via-tour {
   display: grid;
-  gap: 10px;
+  gap: 22px;
+  justify-items: center;
 }
-.via-rec-list li {
-  display: grid;
-  grid-template-columns: 34px 1fr auto;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 12px;
-  background: rgba(10, 18, 40, 0.85);
-  border: 1px solid #1d2c52;
-}
-.via-avatar {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: #07112a;
-  background: linear-gradient(135deg, var(--via-accent-2), var(--via-accent));
-}
-.via-rec-main {
-  display: grid;
-  gap: 6px;
-  min-width: 0;
-}
-.via-rec-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-}
-.via-rec-row .mono {
-  font-size: 0.7rem;
-  color: var(--via-accent);
-}
-.via-rec-skills {
-  display: flex;
+.via-tour-tabs {
+  display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 4px;
-}
-.via-rec-skills em {
-  font-style: normal;
-  font-size: 0.62rem;
-  padding: 2px 8px;
+  padding: 5px;
   border-radius: 999px;
-  color: #cfe0ff;
-  background: rgba(143, 180, 255, 0.1);
+  border: 1px solid var(--border);
+  background: rgba(12, 18, 15, 0.6);
+  backdrop-filter: blur(12px);
 }
-.via-rec-actions {
+.via-tour-tabs button {
+  position: relative;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.25s;
+}
+.via-tour-tabs button:hover,
+.via-tour-tabs button.is-on {
+  color: var(--text);
+}
+.via-tour-tabs button > span {
+  position: relative;
+  z-index: 1;
+}
+.via-tab-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(143, 180, 255, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(143, 180, 255, 0.35);
+}
+.via-tour-stage {
+  width: 100%;
+  max-width: 1040px;
   display: grid;
-  gap: 5px;
-  font-size: 0.62rem;
+  gap: 16px;
+  justify-items: center;
+}
+.via-tour-stage > div {
+  width: 100%;
+}
+.via-tour-caption {
+  color: var(--muted);
   text-align: center;
 }
-.via-rec-actions span {
-  padding: 4px 8px;
-  border-radius: 8px;
-  border: 1px solid #2a3b66;
-  color: #9fb3dd;
-  white-space: nowrap;
+.via-linked-shot {
+  margin-top: 28px;
+  max-width: 560px;
 }
-.via-rec-actions .go {
-  color: #07112a;
-  border-color: transparent;
-  background: var(--via-accent);
-  font-weight: 700;
-}
-.via-rec-foot {
-  font-size: 0.66rem;
-  color: #9fb3dd;
-  text-align: center;
+.via-feature-shot {
+  width: 100%;
 }
 
 /* stats */
@@ -352,7 +306,7 @@
 /* ---------- Home: "Our product" feature ---------- */
 .via-feature {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(32px, 6vw, 80px);
   align-items: center;
   padding: clamp(28px, 4vw, 56px);
@@ -382,12 +336,6 @@
 .via-feature-copy .via-checks {
   margin: 4px 0 6px;
 }
-.via-feature-phone {
-  justify-self: center;
-}
-.via-feature-phone .phone-frame {
-  transform: rotate(-3deg);
-}
 
 @media (max-width: 1024px) {
   .via-hero-grid,
@@ -395,7 +343,7 @@
     grid-template-columns: 1fr;
   }
   .via-hero-visual {
-    max-width: 640px;
+    max-width: 720px;
   }
   .via-feature-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -410,16 +358,8 @@
   .via-feature-grid {
     grid-template-columns: 1fr;
   }
-  .via-hero-phone {
-    display: none;
-  }
-  .via-hero-visual {
-    padding-right: 0;
-  }
-  .via-rec-list li {
-    grid-template-columns: 30px 1fr;
-  }
-  .via-rec-actions {
-    display: none;
+  .via-tour-tabs button {
+    padding: 0 12px;
+    font-size: 0.85rem;
   }
 }

@@ -6,7 +6,7 @@ import { pageHref } from '../routes'
 import { SplitHeading, Reveal, Magnetic, TiltCard, useInViewOnce } from './fx'
 import { Breadcrumbs } from './ServicePage'
 import FAQ from './FAQ'
-import { ViaScreen, ViaRecruiterBrowser } from './ViaMock'
+import { BrowserShot, ViaTour, VIA_SHOTS } from './ViaShots'
 import { dur, ease, stagger, viewport } from '../motion'
 import '../service-page.css'
 import '../via-page.css'
@@ -56,7 +56,8 @@ export default function ViaPage() {
   const reduce = useReducedMotion()
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
-  const phoneY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, -80])
+  const shotY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, -60])
+  const shotRot = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [-6, 0])
   const grid = (s = stagger * 1.5) => ({ initial: reduce ? false : 'hidden', whileInView: 'show', viewport, transition: { staggerChildren: s } })
   const item = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: dur.slow, ease: ease.out } } }
   const fadeIn = (delay) => ({
@@ -102,17 +103,12 @@ export default function ViaPage() {
             </motion.div>
           </div>
 
-          <div className="via-hero-visual">
-            <motion.div {...fadeIn(0.3)}>
-              <ViaRecruiterBrowser />
+          <motion.div className="via-hero-visual" {...fadeIn(0.3)}>
+            <div className="via-hero-glow" aria-hidden="true" />
+            <motion.div style={{ y: shotY, rotateY: shotRot, transformPerspective: 1400 }}>
+              <BrowserShot shot={VIA_SHOTS[0]} eager />
             </motion.div>
-            <motion.div className="via-hero-phone" style={{ y: phoneY }} {...fadeIn(0.6)}>
-              <div className="phone-frame">
-                <span className="phone-cam" aria-hidden="true" />
-                <ViaScreen />
-              </div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -128,6 +124,20 @@ export default function ViaPage() {
             {VIA.problem.stats.map((s) => <Stat key={s.label} {...s} />)}
           </ul>
           <p className="mono via-source">{VIA.problem.source}</p>
+        </div>
+      </section>
+
+      {/* Product tour: real screens */}
+      <section className="section via-tour-section" data-shape="2" data-dim="0.25">
+        <div className="container">
+          <div className="section-head center">
+            <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Inside Via</Reveal>
+            <SplitHeading lines={['See it', 'for yourself.']} accent={['yourself']} className="h2 center" />
+            <Reveal as="p" className="lead center" delay={0.1}>Real screens from via.theivies.in. Pick one to take a look.</Reveal>
+          </div>
+          <Reveal y={40}>
+            <ViaTour />
+          </Reveal>
         </div>
       </section>
 
@@ -216,6 +226,9 @@ export default function ViaPage() {
           <div>
             <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Linked jobs</Reveal>
             <SplitHeading lines={VIA.linked.title} accent={['web']} className="h2" />
+            <Reveal className="via-linked-shot" y={40}>
+              <BrowserShot shot={VIA_SHOTS[1]} />
+            </Reveal>
           </div>
           <Reveal className="svc-proof glass" y={40}>
             <p>{VIA.linked.body}</p>
