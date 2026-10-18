@@ -107,6 +107,15 @@ export function headFor(slug, site) {
           inLanguage: 'en',
         },
         {
+          '@type': 'WebApplication',
+          name: 'Via by Ivies',
+          url: 'https://via.theivies.in/',
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web',
+          description: 'A job platform where candidates verify their skills in a spoken AI interview, only matching candidates can apply, and every applicant gets an answer.',
+          author: { '@id': `${site}#organization` },
+        },
+        {
           '@type': 'MobileApplication',
           name: 'welikethisone: Communities',
           operatingSystem: 'Android',

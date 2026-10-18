@@ -105,7 +105,7 @@ export const AI_SERVICES = [
 export const FAQS = [
   {
     q: 'What does Ivies do?',
-    a: 'Ivies is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products: the Android apps welikethisone, Fairly and dashtr, and LANClip for Windows and Android.',
+    a: 'Ivies is a technology company that builds software for businesses in every industry: AI development and AI integration, custom software, web platforms, Android and iOS apps, cloud and DevOps, UI/UX design, and ongoing tech support. We also build our own products: Via, a hiring platform with AI-verified skills; the Android apps welikethisone, Fairly and dashtr; and LANClip for Windows and Android.',
   },
   {
     q: 'What AI development services do you offer?',
@@ -217,10 +217,25 @@ export const AI_CONSOLE = [
   { role: 'agent', text: 'Drafted fixes for 2 of 3 and opened pull requests. Want me to notify the on-call engineer?' },
 ]
 
-// Apps Ivies has built (Android, plus LANClip on Windows). `icon` is an optional image path in /public
+// Apps Ivies has built: Via (web), Android apps, and LANClip on Windows. `icon` is an optional image path in /public
 // (e.g. 'apps/welikethisone.png'); without one a drawn icon is used.
 // TODO(Ivies): add Play Store links for Fairly, dashtr and LANClip when they launch (status → 'live').
 export const APPS = [
+  {
+    key: 'via',
+    name: 'Via',
+    subtitle: 'Real jobs, verified skills',
+    category: 'Careers · Web app',
+    platform: 'web',
+    status: 'live',
+    url: '',
+    website: 'https://via.theivies.in/',
+    websiteLabel: 'via.theivies.in',
+    icon: 'apps/via.png',
+    tagline: 'Hiring that blooms on trust: verified skills, and an answer for every applicant.',
+    body: 'A job platform built for the age of one-click AI applications. Candidates prove the skills on their résumé in a spoken AI interview and get a verified level for each one. Only candidates who match a job can apply, and employers must reply to every applicant, with a reason when they say no. Real openings from across the web are listed too, checked for ghost and scam postings.',
+    features: ['Spoken AI skill interviews', 'Verified skill levels', 'Match-based applications', 'Every applicant answered', 'Pay-per-post hiring'],
+  },
   {
     key: 'welikethisone',
     name: 'welikethisone',
