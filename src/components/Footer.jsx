@@ -41,6 +41,7 @@ export default function Footer({ isHome, onNavigate }) {
         <nav aria-label="Company">
           <h2 className="footer-h">Company</h2>
           <ul>
+            <li><a href={pageHref('via')}>Via, our product</a></li>
             <li>{anchor('apps', 'Our apps')}</li>
             <li>{anchor('process', 'How we work')}</li>
             <li>{anchor('industries', 'Industries')}</li>

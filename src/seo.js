@@ -1,6 +1,7 @@
 // Per-page <head> tags and JSON-LD, generated at build time by
 // scripts/prerender.mjs. Structured data only describes what the page shows.
 import { SERVICE_PAGES, SERVICES_HUB, pageBySlug } from './services-data.js'
+import { VIA } from './via-data.js'
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
@@ -107,15 +108,6 @@ export function headFor(slug, site) {
           inLanguage: 'en',
         },
         {
-          '@type': 'WebApplication',
-          name: 'Via by Ivies',
-          url: 'https://via.theivies.in/',
-          applicationCategory: 'BusinessApplication',
-          operatingSystem: 'Web',
-          description: 'A job platform where candidates verify their skills in a spoken AI interview, only matching candidates can apply, and every applicant gets an answer.',
-          author: { '@id': `${site}#organization` },
-        },
-        {
           '@type': 'MobileApplication',
           name: 'welikethisone: Communities',
           operatingSystem: 'Android',
@@ -126,6 +118,42 @@ export function headFor(slug, site) {
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
           author: { '@id': `${site}#organization` },
         },
+      ],
+    })
+  }
+
+  if (slug === 'via') {
+    const url = `${site}via/`
+    return tags({
+      title: VIA.metaTitle,
+      description: VIA.metaDescription,
+      url,
+      site,
+      graph: [
+        organization(site, false),
+        website,
+        {
+          '@type': 'WebPage',
+          '@id': `${url}#webpage`,
+          url,
+          name: VIA.metaTitle,
+          description: VIA.metaDescription,
+          isPartOf: { '@id': `${site}#website` },
+          about: { '@id': `${url}#app` },
+          inLanguage: 'en',
+        },
+        {
+          '@type': 'WebApplication',
+          '@id': `${url}#app`,
+          name: 'Via by Ivies',
+          url: VIA.links.open,
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web',
+          description: VIA.lead,
+          author: { '@id': `${site}#organization` },
+          offers: VIA.pricing.map((p) => ({ '@type': 'Offer', name: p.name, price: p.price.replace(/[^0-9.]/g, ''), priceCurrency: 'INR', description: `${p.unit}. ${p.note}` })),
+        },
+        breadcrumbs(site, [['Home', site], ['Via', url]]),
       ],
     })
   }
@@ -200,6 +228,7 @@ export function headFor(slug, site) {
 // Used by llms.txt
 export function pageIndex(site) {
   return [
+    ['Via, our product', `${site}via/`, VIA.lead],
     ['Services overview', `${site}services/`, SERVICES_HUB.lead],
     ...SERVICE_PAGES.map((p) => [p.navTitle, `${site}${p.slug}/`, p.lead]),
   ]

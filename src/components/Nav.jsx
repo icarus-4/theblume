@@ -14,7 +14,7 @@ export default function Nav({ route, onNavigate, onStartProject }) {
   const [hidden, setHidden] = useState(false)
   const [open, setOpen] = useState(false)
   // On a service page, highlight the matching top-level page link.
-  const pageActive = route.type === 'hub' ? 'services' : route.type === 'service' ? (route.page.kind === 'ai' ? 'ai-development' : 'services') : ''
+  const pageActive = route.type === 'product' ? 'via' : route.type === 'hub' ? 'services' : route.type === 'service' ? (route.page.kind === 'ai' ? 'ai-development' : 'services') : ''
   const [active, setActive] = useState(pageActive)
 
   useMotionValueEvent(scrollY, 'change', (y) => {

@@ -24,7 +24,7 @@ const SEO_BLOCK = /<!-- seo:start[\s\S]*?<!-- seo:end -->/
 if (!SEO_BLOCK.test(template)) throw new Error('seo markers not found in dist/index.html')
 if (!template.includes('<div id="root"></div>')) throw new Error('root placeholder not found in dist/index.html')
 
-const slugs = ['', 'services', ...SERVICE_PAGES.map((p) => p.slug)]
+const slugs = ['', 'via', 'services', ...SERVICE_PAGES.map((p) => p.slug)]
 let words = []
 for (const slug of slugs) {
   const body = render(`${base}${slug ? `${slug}/` : ''}`)
@@ -64,7 +64,10 @@ ${pageIndex(site).map(([name, url, desc]) => `- [${name}](${url}): ${desc}`).joi
 ## AI development capabilities
 ${AI_SERVICES.map((s) => `- ${s.title}: ${s.body}`).join('\n')}
 
-## Our products
+## Main product
+- Via by Ivies (https://via.theivies.in/, overview: ${site}via/): a hiring platform where candidates verify their skills in a spoken AI interview, only candidates who match a job can apply, and every applicant gets an answer. Job posts from ₹100; skill verification ₹50.
+
+## Our apps
 ${APPS.map((a) => `- ${a.name}${a.subtitle ? ` (${a.subtitle})` : ''}${a.website ? ` (${a.website})` : ''}: ${a.tagline}${a.status === 'live' && a.url ? ` Google Play: ${a.url}` : a.status === 'live' && a.platform === 'web' ? ' Live web app.' : ' Coming soon to app stores.'}`).join('\n')}
 
 ## FAQ

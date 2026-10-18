@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
-import { ArrowUpRight, BadgeCheck, Bell, Clipboard, Clock, Fuel, Globe, Hourglass, Lock, Mic, Monitor, ThumbsDown, Wrench, Zap, Smartphone } from 'lucide-react'
+import { ArrowUpRight, Bell, Clipboard, Clock, Fuel, Globe, Hourglass, Lock, Monitor, ThumbsDown, Wrench, Zap, Smartphone } from 'lucide-react'
 import { APPS } from '../content'
 import { SplitHeading, Reveal, TiltCard, useInViewOnce } from './fx'
 import { dur, ease, stagger, viewport } from '../motion'
@@ -157,83 +157,6 @@ function FairlyScreen() {
   )
 }
 
-// Illustrative screen for Via: a skill profile verified by the AI interview.
-const VIA_SKILLS = [
-  { name: 'Python', level: 'Advanced', v: 92 },
-  { name: 'SQL', level: 'Intermediate', v: 78 },
-  { name: 'Git', level: 'Foundation', v: 60 },
-]
-
-function ViaScreen() {
-  const ref = useRef(null)
-  const on = useInViewOnce(ref, 0.4)
-  const reduce = useReducedMotion()
-  const [match, setMatch] = useState(reduce ? 84 : 0)
-
-  useEffect(() => {
-    if (!on || reduce) return
-    const start = performance.now()
-    let raf
-    const tick = (now) => {
-      const p = Math.min(1, (now - start) / 1400)
-      setMatch(Math.round(84 * (1 - Math.pow(1 - p, 3))))
-      if (p < 1) raf = requestAnimationFrame(tick)
-    }
-    const t = setTimeout(() => (raf = requestAnimationFrame(tick)), 700)
-    return () => {
-      clearTimeout(t)
-      cancelAnimationFrame(raf)
-    }
-  }, [on, reduce])
-
-  const C = 2 * Math.PI * 15
-  return (
-    <div className="phone-screen via" ref={ref} aria-hidden="true">
-      <div className="via-top">
-        <span className="via-word">Via<small>by Ivies</small></span>
-        <span className="via-mic"><Mic size={12} /> AI interview</span>
-      </div>
-      <div className="via-badge">
-        <BadgeCheck size={16} />
-        <div>
-          <b>Skills verified</b>
-          <small className="mono">78% · 12 spoken answers</small>
-        </div>
-      </div>
-      <ul className="via-skills">
-        {VIA_SKILLS.map((k, i) => (
-          <li key={k.name}>
-            <div className="via-skill-row">
-              <span>{k.name}</span>
-              <em>{k.level}</em>
-            </div>
-            <span className="via-bar">
-              <motion.i
-                initial={{ scaleX: 0 }}
-                animate={on ? { scaleX: k.v / 100 } : {}}
-                transition={{ duration: 1, ease: ease.out, delay: 0.25 + i * 0.12 }}
-              />
-            </span>
-          </li>
-        ))}
-      </ul>
-      <div className="via-job">
-        <svg viewBox="0 0 36 36" className="via-ring">
-          <circle cx="18" cy="18" r="15" className="via-ring-bg" />
-          <circle cx="18" cy="18" r="15" className="via-ring-fg" strokeDasharray={C} strokeDashoffset={C * (1 - match / 100)} />
-          <text x="18" y="21" textAnchor="middle">{match}%</text>
-        </svg>
-        <div>
-          <b>Backend Developer</b>
-          <small>Via job · you match</small>
-        </div>
-      </div>
-      <span className="via-apply">Apply with verified skills</span>
-      <span className="via-promise mono">Every applicant gets an answer</span>
-    </div>
-  )
-}
-
 // Illustrative phone screen for dashtr: economy, costs and a paperwork alert.
 const DASHTR_COSTS = [42, 58, 35, 66, 48, 72]
 
@@ -384,7 +307,6 @@ function SoonScreen() {
 }
 
 const SCREENS = {
-  via: () => <ViaScreen />,
   welikethisone: () => <VoteScreen />,
   fairly: () => <FairlyScreen />,
   dashtr: () => <DashtrScreen />,
@@ -495,7 +417,7 @@ export default function Apps() {
           <Reveal as="p" className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Built by Ivies</Reveal>
           <SplitHeading lines={['Apps', 'we’ve built.']} accent={['built']} className="h2" />
           <Reveal as="p" className="lead section-lead" delay={0.15}>
-            We don’t just build for clients. These are our own web, Android and Windows apps, designed, engineered and launched by our team.
+            We don’t just build for clients. These are our own Android and Windows apps, designed, engineered and launched by our team.
           </Reveal>
         </div>
 

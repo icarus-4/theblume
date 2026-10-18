@@ -18,6 +18,8 @@ import ProjectModal from './components/ProjectModal'
 import Footer from './components/Footer'
 import ServicePage from './components/ServicePage'
 import ServicesHub from './components/ServicesHub'
+import ViaPage from './components/ViaPage'
+import ViaFeature from './components/ViaFeature'
 import { resolveRoute } from './routes'
 
 // three.js is heavy — load it after the text content (ui-ux-pro-max: lazy load).
@@ -116,12 +118,14 @@ export default function App({ path }) {
             <Services />
             <AISection />
             <AIServices onStartProject={openForm} />
+            <ViaFeature />
             <Apps />
             <Process />
             <Industries />
             <FAQ />
           </>
         )}
+        {route.type === 'product' && <ViaPage />}
         {route.type === 'hub' && <ServicesHub onStartProject={openForm} />}
         {route.type === 'service' && <ServicePage key={route.slug} page={route.page} onStartProject={openForm} />}
         <Contact onStartProject={openForm} />

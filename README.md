@@ -4,8 +4,8 @@ Website for **Ivies** (formerly theBlume) — an AI development and software
 company. Live at <https://www.theivies.in/> (www.theblume.in redirects there).
 
 A motion-driven React site (Vite, framer-motion, three.js particle field, Lenis
-smooth scrolling) with a home page, a services hub and 11 dedicated service
-pages. Every page is prerendered to static HTML at build time so search
+smooth scrolling) with a home page, a product page for Via (`/via/`), a
+services hub and 11 dedicated service pages. Every page is prerendered to static HTML at build time so search
 engines and AI crawlers can read it without running JavaScript.
 
 ## Develop
@@ -30,6 +30,7 @@ npm run preview    # serve dist/ exactly as it will be deployed
 |---|---|
 | Home page copy, FAQs, apps | `src/content.js` |
 | Service page content | `src/services-data.js` |
+| Via product page content and prices | `src/via-data.js` |
 | Per-page titles, meta tags, JSON-LD | `src/seo.js` |
 | Site URL (canonical, sitemap, Open Graph) | `.env` → `VITE_SITE_URL` |
 
